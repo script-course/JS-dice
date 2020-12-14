@@ -5,45 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>JavaScript Dobbelstenen</title>
         <style>
-            td {
+            td,
+            th {
                 border: 1px solid black;
+                width: 60px;
+            }
+
+            input {
                 width: 50px;
+            }
+
+            span {
+                display: inline-block;
+                width: 220px;
             }
         </style>
     </head>
     <body>
+        <div>
+            <span>Aantal dobbelstenen:</span>
+            <input type="number" id="die-count" value="8" min="0" />
+        </div>
+
+        <div>
+            <span>Aantal kanten per dobbelsteen:</span>
+            <input type="number" id="die-sides" value="6" min="0" />
+        </div>
+
         <button id="click">Gooi!</button>
 
         <!-- Step 10: Emmet used: table>tr*7>td*2 -->
         <table style="border-collapse: collapse">
-            <tr style="background-color: black; color: antiquewhite">
-                <td>Getal</td>
-                <td>Aantal</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td id="1"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td id="2"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td id="3"></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td id="4"></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td id="5"></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td id="6"></td>
-            </tr>
+            <thead>
+                <tr style="background-color: black; color: antiquewhite">
+                    <th>Getal</th>
+                    <th>Aantal</th>
+                </tr>
+            </thead>
+            <tbody id="die-table"></tbody>
         </table>
 
         <script src="script.js"></script>
