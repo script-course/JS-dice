@@ -88,6 +88,7 @@ document.getElementById('click').onclick = () => {
 
     for (let dieSide = 1; dieSide <= dieSides; dieSide++) count[dieSide] = 0;
 
+    // using _ here, since the variable is not being used
     for (let _ = 1; _ <= dieCount; _++) count[randomDie(dieSides)]++;
 
     for (const side in count) {
